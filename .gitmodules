@@ -1,0 +1,6 @@
+[submodule "movies/backend"]
+	path = movies/backend
+	url = https://github.com/josdavidmo/meiko_etl_challenge_back.git
+[submodule "movies/frontend"]
+	path = movies/frontend
+	url = https://github.com/josdavidmo/meiko_etl_challenge_front.git

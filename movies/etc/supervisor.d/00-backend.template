@@ -1,0 +1,8 @@
+[program:backend]
+directory=/var/www/backend/
+command=gunicorn --access-logfile - --workers 2 --bind unix:/var/run/backend.sock backend.wsgi:application --timeout 500
+priority=990
+autostart=true
+autorestart=true
+stdout_logfile=${STORAGE_PATH}/logs/backend.log
+stderr_logfile=${STORAGE_PATH}/logs/backend.log

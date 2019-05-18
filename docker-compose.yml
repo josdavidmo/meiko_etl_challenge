@@ -1,0 +1,34 @@
+version: "3"
+
+services:
+
+  postgres:
+    image: postgres:11.3-alpine
+    ports:
+      - "5432:5432"
+    networks:
+      - meiko_net
+    volumes:
+      - ./storage/postgres:/var/lib/postgresql/data
+    env_file: ./envs/postgres.env
+
+  movies:
+    build: movies
+    links:
+      - postgres:postgres
+    ports:
+      - "80:80"
+    expose:
+      - "80"
+    networks:
+      - meiko_net
+    volumes:
+      - ./storage/movies:/var/storage
+      - ./movies/backend:/var/www/backend
+      - ./movies/frontend:/var/www/frontend
+    environment:
+      - VIRTUAL_HOST=local.moviesback,local.movies
+    env_file: ./envs/movies.env
+
+networks:
+  meiko_net:
