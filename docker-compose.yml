@@ -10,6 +10,7 @@ services:
       - meiko_net
     volumes:
       - ./storage/postgres:/var/lib/postgresql/data
+      - ./init/create_db.sql:/docker-entrypoint-initdb.d/create_db.sql
     env_file: ./envs/postgres.env
 
   movies:
@@ -18,8 +19,6 @@ services:
       - postgres:postgres
     ports:
       - "80:80"
-    expose:
-      - "80"
     networks:
       - meiko_net
     volumes:

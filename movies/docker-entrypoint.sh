@@ -22,6 +22,8 @@ if [ "$1" = 'supervisord' ]; then
   python3 manage.py collectstatic --noinput
 
   supervisord -c /etc/supervisord.conf
+
+
 else
   exec "$@"
 fi

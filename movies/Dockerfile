@@ -7,7 +7,7 @@ ENV STORAGE_PATH /var/storage
 
 # Install base package
 RUN apk add --no-cache tzdata bash vim htop supervisor \
-  python3 py-pip python3-dev build-base postgresql-client \
+  python3 py-pip python3-dev build-base postgresql-dev \
   && pip3 install --upgrade pip \
   && pip2 install --upgrade pip \
   && pip2 install supervisor-stdout
