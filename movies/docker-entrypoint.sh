@@ -20,6 +20,10 @@ if [ "$1" = 'supervisord' ]; then
   # Django
   python3 manage.py migrate
   python3 manage.py collectstatic --noinput
+  mkdir -p fixtures
+  time python3 manage.py importmovies --file=data/movie_metadata.tar.xz
+  files=$(ls fixtures)
+  time python3 manage.py loaddata $files
 
   supervisord -c /etc/supervisord.conf
 

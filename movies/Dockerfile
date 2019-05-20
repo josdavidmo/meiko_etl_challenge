@@ -19,10 +19,6 @@ RUN cp /usr/share/zoneinfo/America/Bogota /etc/localtime && apk del tzdata
 COPY etc /etc
 RUN rm -f /etc/nginx/conf.d/default.conf
 
-# docker-entrypoint
-COPY docker-entrypoint.sh /
-RUN chmod u+x /docker-entrypoint.sh
-
 # Supervisor
 RUN mkdir -p /var/log/supervisor
 
@@ -34,6 +30,10 @@ RUN pip3 install -r /tmp/requirements.txt --no-deps
 COPY backend /var/www/backend
 
 WORKDIR /var/www/backend
+
+# docker-entrypoint
+COPY docker-entrypoint.sh /
+RUN chmod u+x /docker-entrypoint.sh
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["supervisord"]
