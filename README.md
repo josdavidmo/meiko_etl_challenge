@@ -20,7 +20,7 @@ docker-compose build movies
 docker-compose up movies
 ```
 
-In your browser write `localhost` and you will see Django Home Page!. The docker-entrypoint run this for you:
+In your browser write `localhost` and you will see Django Home Page!. The [docker-entrypoint](https://github.com/josdavidmo/meiko_etl_challenge/blob/master/movies/docker-entrypoint.sh) run this for you:
 
 ```
 python3 manage.py migrate
