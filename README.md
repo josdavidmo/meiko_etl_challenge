@@ -1,6 +1,6 @@
-# meiko_etl_challenge
+# Meiko ETL Challenge
 
-Hi! Thanks for give me the opportunity to make this test, I am so glad to show what I can do and I hope it fills your expectations. This project is divided in three main parts:
+Hi! Thanks a lot for give me the opportunity to make this test, I am so glad to show what I can do and I hope it fills your expectations. This project is divided in three main parts:
 
 1. Docker. Docker solution is complete and working. You can change passwords and usernames in movies.env file.
 2. Backend. Backend solution was made in Django. Please refer to submodule to see documentation.
