@@ -2,4 +2,7 @@
 .idea
 
 # volume
-storage/
+storage/*
+
+# exception
+!somefolder/.gitkeep
