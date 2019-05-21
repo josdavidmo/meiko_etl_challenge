@@ -11,7 +11,7 @@ Please be free to make your observations in issues section.
 
 # Docker Solution
 
-This takes images from ngnix and postgres made in alpine. So it does not take so much time to deploy it! All you need is `docker` and `docker-compose`. All you need to do is:
+This takes images from ngnix and postgres made in alpine. So it does not take so much time to deploy it! All you need is `docker` and `docker-compose`. Please run the next commands:
 
 ```
 git clone https://github.com/josdavidmo/meiko_etl_challenge.git --recursive
@@ -35,11 +35,7 @@ You will see in shell the time taken to:
 1. Create fixtures files.
 2. Import data to database.
 
-Please refer to backend submodule in order to see the strategy and design taken.
-
-
-
-
+Please refer to backend [submodule](https://github.com/josdavidmo/meiko_etl_challenge_back) in order to see the strategy and design taken.
 
 
 
