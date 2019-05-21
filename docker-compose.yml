@@ -19,6 +19,10 @@ services:
       - postgres:postgres
     ports:
       - "80:80"
+      - "8080:8080"
+    expose:
+      - "80"
+      - "8080"
     networks:
       - meiko_net
     volumes:

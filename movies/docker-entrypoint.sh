@@ -15,6 +15,7 @@ if [ "$1" = 'supervisord' ]; then
 
   # Nginx
   envsubst < /etc/nginx/conf.d/backend.template > /etc/nginx/conf.d/backend.conf
+  envsubst < /etc/nginx/conf.d/frontend.template > /etc/nginx/conf.d/frontend.conf
   rm -f /etc/nginx/conf.d/*.template
 
   # Django
