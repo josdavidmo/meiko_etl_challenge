@@ -5,4 +5,4 @@
 storage/*
 
 # exception
-!somefolder/.gitkeep
+!storage/.gitkeep
