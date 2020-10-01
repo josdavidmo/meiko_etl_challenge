@@ -9,7 +9,7 @@ Hi! Thanks a lot for give me the opportunity to make this test, I am so glad to 
 Please be free to make your observations in issues section. 
 
 
-# Docker Solution
+# Docker Solution for beginners
 
 This takes images from ngnix and postgres made in alpine. So it does not take so much time to deploy it! All you need is `docker` and `docker-compose`. Please run the next commands:
 
